@@ -1,0 +1,25 @@
+[1;31m
+Start test 1[0m
+
+(  .   ____          _            __ _ _
+) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+*( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
++ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+*  '  |____| .__|_| |_|_| |_\__, | / / / /
+) =========|_|==============|___/=/_/_/_/
++ :: Spring Boot ::        (v2.3.1.RELEASE)
+
+Š2021-12-22 21:23:39.455  INFO 25382 --- [    Test worker] task.Main                                : Starting Main on kaliyas-PC with PID 25382 (started by kaliya in /home/kaliya/IdeaProjects/Recipes/Topics/Posting and deleting data via REST/Return query parameter)
+¦2021-12-22 21:23:39.462  INFO 25382 --- [    Test worker] task.Main                                : No active profile set, falling back to default profiles: default
+“2021-12-22 21:23:41.502  INFO 25382 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2021-12-22 21:23:41.527  INFO 25382 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+•2021-12-22 21:23:41.528  INFO 25382 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+˜2021-12-22 21:23:41.650  INFO 25382 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+¥2021-12-22 21:23:41.650  INFO 25382 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2120 ms
+œ2021-12-22 21:23:42.095  INFO 25382 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+›2021-12-22 21:23:42.545  INFO 25382 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+¢2021-12-22 21:23:42.622  INFO 25382 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+›2021-12-22 21:23:42.647  INFO 25382 --- [    Test worker] task.Main                                : Started Main in 3.712 seconds (JVM running for 4.825)
+Ÿ2021-12-22 21:23:43.200  INFO 25382 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Ž2021-12-22 21:23:43.202  INFO 25382 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+‡2021-12-22 21:23:43.214  INFO 25382 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
