@@ -5,17 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.*;
 
 @SpringBootApplication
 public class RecipesApplication {
     public static void main(String[] args) {
-
         SpringApplication.run(RecipesApplication.class, args);
     }
 }
@@ -24,26 +21,18 @@ public class RecipesApplication {
 @NoArgsConstructor
 @AllArgsConstructor
 class Recipe {
-    String name;
-    String description;
-    String ingredients;
-    String directions;
+
+    private String name;
+    private String description;
+    private String[] ingredients;
+    private String[] directions;
 }
 
+@ResponseStatus(code = HttpStatus.NOT_FOUND)
+    class RecipeNotFoundException extends RuntimeException {
 
-@RestController
-class Controller {
-
-    private ArrayList allRecipes = new ArrayList<>();
-
-    @PostMapping("/api/recipe")
-    public Object postRecipe(@RequestBody Recipe recipe) {
-        allRecipes.add(recipe);
-        return recipe;
+        public RecipeNotFoundException(String cause) {
+            super(cause);
+        }
     }
 
-    @GetMapping("/api/recipe")
-    public Object getRecipe(Recipe recipe) {
-        return allRecipes.get(allRecipes.size() - 1);
-    }
-}
