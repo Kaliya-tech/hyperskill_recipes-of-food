@@ -8,3 +8,10 @@ content:
 - Posting and deleting data via REST
 - Handling requests with bodies
 - Regexes in programs
+- Default methods
+- Anonymous classes
+- Lambda expressions
+- Method references
+- Functional interfaces
+- Standard functional interfaces
+- Optional

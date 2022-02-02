@@ -101,8 +101,8 @@ Thread-1 leaves the method of instance-1</code></pre>
         }
     }
 }</code></pre> 
-  <p>The block inside <code class="language-java">staticMethod</code> is synchronized on the class that means only one thread can execute code in this block.</p> 
-  <p>The block inside <code class="language-java">instanceMethod</code> is synchronized on <code class="language-java">this</code> instance that means only one thread can execute the block of the instance. But some other thread is able to execute the block of different instances at the same time.</p> 
+  <p>The block inside <code class="language-java">staticMethod</code> is synchronized on the class, which means only one thread can execute code in this block.</p> 
+  <p>The block inside <code class="language-java">instanceMethod</code> is synchronized on <code class="language-java">this</code> instance, which means only one thread can execute the block of the instance. But some other thread is able to execute the block of different instances at the same time.</p> 
   <p>Synchronized blocks may resemble synchronized methods, but they allow programmers to synchronize only necessary parts of methods.</p> 
   <h5 style="text-align: center;">Synchronization and visibility of changes</h5> 
   <p>The <em>Java Language Specification</em> guarantees that changes performed by a thread are visible to other threads if they are synchronized on the same monitor. More precisely, if a thread has changed shared data (for example, a variable) inside a synchronized block or a method and released the monitor, other threads can see all changes after acquiring the same monitor.</p> 
