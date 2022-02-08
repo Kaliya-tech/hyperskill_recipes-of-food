@@ -106,7 +106,7 @@ public class TaskController {
 
     @GetMapping("/tasks/{id}")
     public Task getTask(@PathVariable int id) {
-        return taskList.get(id);
+        return taskList.get(id - 1); // list indices start from 0
     }
 }</code></pre> 
   <p>We added <code class="language-java">{id}</code> to the <code class="language-java">@GetMapping</code> annotation to tell Spring that we expect the <code class="language-java">id</code> parameter. We can place the <code class="language-java">id</code> variable as <code class="language-java">@PathVariable</code> in the arguments of our <code class="language-java">getTask</code> method. It indicates to Spring how to map the parameter provided in <code class="language-java">@GetMapping</code> to the function. After that, the function will return only one element rather than the whole collection. A request to <em>http://localhost:8080/tasks/0 </em>gives us the first task in the list:</p> 
@@ -118,7 +118,7 @@ public class TaskController {
   <p>There is an example below when we return <code class="language-java">202 ACCEPTED</code> instead of <code class="language-java">200 OK</code>.</p> 
   <pre><code class="language-java">@GetMapping("/tasks/{id}")
 public ResponseEntity&lt;Task&gt; getTasks(@PathVariable int id) {
-    return new ResponseEntity&lt;&gt;(taskList.get(id), HttpStatus.ACCEPTED);
+    return new ResponseEntity&lt;&gt;(taskList.get(id - 1), HttpStatus.ACCEPTED);
 }</code></pre> 
   <p>Actually, the status code <code class="language-java">202 ACCEPTED</code> is not the best example for this case, but it clearly demonstrates the possibility to change the status code.</p> 
   <h5>Conclusion</h5> 

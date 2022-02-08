@@ -28,6 +28,9 @@ subprojects {
     }
 
     dependencies {
+
+
+
         compileOnly 'org.projectlombok:lombok:1.18.22'
         annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
@@ -60,6 +63,9 @@ subprojects {
 project(':util') {
     dependencies {
         implementation 'com.github.hyperskill:hs-test:release-SNAPSHOT'
+
+
+
     }
 }
 

@@ -62,12 +62,12 @@ long val = square.apply(10L); // the result is 100L</code></pre>
   </div>
   <p></p> 
   <p><strong>3) Method references.</strong></p> 
-  <p>Another way to implement a functional interface is by using method references. In this case, the signature of a method should match the signature of the single abstract method of a functional interface.</p> 
+  <p>Another way to implement a functional interface is by using method references. In this case, the number and type of arguments and the return type of a method should match the number and types of arguments and the return type of the single abstract method of a functional interface.</p> 
   <p>Suppose, there is a method <code class="language-java">square</code> that takes and returns a <code class="language-java">long</code> value:</p> 
   <pre><code class="language-java">public static long square(long val) {
     return val * val;
 }</code></pre> 
-  <p>The signature of this method fits the <code class="language-java">Func&lt;Long, Long&gt;</code> functional interface. This means we can create a method reference and assign it to an object of the <code class="language-java">Func&lt;Long, Long&gt;</code> type:</p> 
+  <p>The argument and the return type of this method fits the <code class="language-java">Func&lt;Long, Long&gt;</code> functional interface. This means we can create a method reference and assign it to an object of the <code class="language-java">Func&lt;Long, Long&gt;</code> type:</p> 
   <pre><code class="language-java">Func&lt;Long, Long&gt; square = Functions::square;</code></pre> 
   <p>Keep in mind, that the compiler creates an intermediate hidden class that implements the <code class="language-java">Func&lt;Long, Long&gt;</code> interface in a similar way to the case of lambda expressions.</p> 
   <p></p>
