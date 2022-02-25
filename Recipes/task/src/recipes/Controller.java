@@ -15,6 +15,7 @@ public class Controller {
     private Map<String, Integer> postRecipe(@RequestBody Recipe recipe) {
         allRecipes.add(recipe);
         return Map.of("id", allRecipes.size());
+
     }
 
     @GetMapping("/api/recipe/{id}")
@@ -25,4 +26,12 @@ public class Controller {
         }
         return allRecipes.get(id - 1);
     }
+
+    @DeleteMapping("/api/recipe{id}")
+    public String deleteRecipe(@RequestParam Recipe recipe) {
+        allRecipes.remove(recipe);
+        return "Deleted!";
+    }
+
 }
+

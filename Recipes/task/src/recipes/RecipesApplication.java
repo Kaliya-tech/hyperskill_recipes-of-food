@@ -25,35 +25,4 @@ public class RecipesApplication {
     }
 }
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity(name = "recipe")
-class Recipe {
-
-    @Column
-    @Id
-    private String name;
-
-    @Column
-    private String description;
-
-    @Column
-    @NotEmpty
-    @Size(min = 1)
-    private String[] ingredients;
-
-    @Column
-    @NotEmpty
-    @Size(min = 1)
-    private String[] directions;
-}
-
-@ResponseStatus(code = HttpStatus.NOT_FOUND)
-    class RecipeNotFoundException extends RuntimeException {
-
-        public RecipeNotFoundException(String cause) {
-            super(cause);
-        }
-    }
 
